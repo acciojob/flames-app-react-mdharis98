@@ -39,12 +39,20 @@ const Flames = () => {
         <div>
             <h1>FLAMES GAME</h1>
             <form>
-                <input type="text" name="name1" data-testid="input1" aria-label="name1-input" value={name1} onChange={(event) => setName1(event.target.value)}/>
+                {/* <input type="text" name="name1" data-testid="input1" aria-label="name1-input" value={name1} onChange={(event) => setName1(event.target.value)}/>
                 <input type="text" name="name2" data-testid="input2" aria-label="name2-input" value={name2} onChange={(event) => setName2(event.target.value)}/>
                 <button data-testid="calculate_relationship"  aria-label="calculate-relationship" onClick={handleCalculateRelation}>Calculate Relationship Future</button>
-                <button data-testid="clear" aria-label="clear-button" onClick={handleClear}>Clear</button>
+                <button data-testid="clear" aria-label="clear-button" onClick={handleClear}>Clear</button> */}
+
+<input type="text" name="name1" data-testid="input1" value={name1} onChange={(event) => setName1(event.target.value)} />
+<input type="text" name="name2" data-testid="input2" value={name2} onChange={(event) => setName2(event.target.value)} />
+<button data-testid="calculate_relationship" onClick={handleCalculateRelation}>Calculate Relationship Future</button>
+<button data-testid="clear" onClick={handleClear}>Clear</button>
+
             </form>
-            <h3 data-testid="answer"  aria-label="answer-output" >{answer.length > 0 && `${answer}`}</h3>
+            {/* <h3 data-testid="answer"  aria-label="answer-output" >{answer.length > 0 && `${answer}`}</h3> */}
+            <h3 data-testid="answer">{answer && answer}</h3>
+
         </div>
     )
 }
